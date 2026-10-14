@@ -1,0 +1,1255 @@
+{
+  "source_name": "Минпросвещения РФ",
+  "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+  "source_sha256": "52707f06ed58c2cb88225780bb72eaa536910927a432568620edf4e6eda1b459",
+  "academic_year": "2026-2027",
+  "rows": [
+    {
+      "minpros_item_number": "1.1",
+      "source_pdf_pages": [
+        3,
+        4
+      ],
+      "title": "Всероссийская олимпиада школьников (заключительный этап)",
+      "organizer": "Министерство просвещения Российской Федерации",
+      "academic_year": "2026-2027",
+      "type": "olympiad",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Математика",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Русский язык",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Иностранный язык (английский, немецкий, французский, испанский, китайский, итальянский)",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Информатика",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Физика",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Химия",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Биология",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Экология",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "География",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Астрономия",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Литература",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "История",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Обществознание",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Экономика",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Право",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Искусство (мировая художественная культура)",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Физическая культура",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Труд (технология)",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Основы безопасности и защиты Родины",
+          "level": "Высший уровень"
+        }
+      ],
+      "minpros_level": "Высший уровень",
+      "audience": "school",
+      "audience_evidence": "Для обучающихся по образовательным программам основного общего и среднего общего образования (PDF, страница 4).",
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "0",
+      "eligibility_comment": "Для обучающихся по образовательным программам основного общего и среднего общего образования (PDF, страница 4).",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "1.2",
+      "source_pdf_pages": [
+        4
+      ],
+      "title": "Всероссийская олимпиада школьников (региональный этап)",
+      "organizer": "Исполнительные органы субъектов Российской Федерации, осуществляющие государственное управление в сфере образования",
+      "academic_year": "2026-2027",
+      "type": "olympiad",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Математика",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Русский язык",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Иностранный язык (английский, немецкий, французский, испанский, китайский, итальянский)",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Информатика",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Физика",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Химия",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Биология",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Экология",
+          "level": "I уровень"
+        },
+        {
+          "profile": "География",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Астрономия",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Литература",
+          "level": "I уровень"
+        },
+        {
+          "profile": "История",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Обществознание",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Экономика",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Право",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Искусство (мировая художественная культура)",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Физическая культура",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Труд (технология)",
+          "level": "I уровень"
+        },
+        {
+          "profile": "Основы безопасности и защиты Родины",
+          "level": "I уровень"
+        }
+      ],
+      "minpros_level": "I уровень",
+      "audience": "school",
+      "audience_evidence": "Для обучающихся по образовательным программам основного общего и среднего общего образования (PDF, страница 4).",
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "0",
+      "eligibility_comment": "Для обучающихся по образовательным программам основного общего и среднего общего образования (PDF, страница 4).",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "5.23",
+      "source_pdf_pages": [
+        12
+      ],
+      "title": "IV Международный конкурс научно-исследовательских работ среди обучающихся по программам среднего профессионального образования в области музыкального искусства",
+      "organizer": "Федеральное государственное бюджетное образовательное учреждение высшего образования «Российская академия музыки имени Гнесиных»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Музыкальное искусство",
+          "level": "Высший уровень"
+        }
+      ],
+      "minpros_level": "Высший уровень",
+      "audience": "spo",
+      "audience_evidence": "Прямо указано: среди обучающихся по программам среднего профессионального образования в области музыкального искусства (PDF, страница 12).",
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "1",
+      "eligibility_comment": "Прямо указано: среди обучающихся по программам среднего профессионального образования в области музыкального искусства (PDF, страница 12).",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "5.24",
+      "source_pdf_pages": [
+        12
+      ],
+      "title": "XVI Всероссийский фестиваль-конкурс народно-певческого искусства «Вечные истоки»",
+      "organizer": "Федеральное государственное бюджетное образовательное учреждение высшего образования «Российская академия музыки имени Гнесиных»",
+      "academic_year": "2026-2027",
+      "type": "festival",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Вокальное исполнительство",
+          "level": "Высший уровень"
+        }
+      ],
+      "minpros_level": "Высший уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "5.25",
+      "source_pdf_pages": [
+        12
+      ],
+      "title": "XIII Международный конкурс вокалистов имени Наталии Шпиллер «Шедевры русской музыки»",
+      "organizer": "Федеральное государственное бюджетное образовательное учреждение высшего образования «Российская академия музыки имени Гнесиных»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Вокальное исполнительство",
+          "level": "Высший уровень"
+        }
+      ],
+      "minpros_level": "Высший уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "5.26",
+      "source_pdf_pages": [
+        12
+      ],
+      "title": "XIII Международный студенческий конкурс исполнителей на народных инструментах ВУЗов СНГ",
+      "organizer": "Федеральное государственное бюджетное образовательное учреждение высшего образования «Российская академия музыки имени Гнесиных»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Вокальное исполнительство",
+          "level": "Высший уровень"
+        },
+        {
+          "profile": "Инструментальное исполнительство",
+          "level": "Высший уровень"
+        }
+      ],
+      "minpros_level": "Высший уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": "В названии указаны ВУЗы СНГ; допуск СПО не подтвержден.",
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "5.27",
+      "source_pdf_pages": [
+        12
+      ],
+      "title": "Всероссийская теоретическая олимпиада 2027",
+      "organizer": "Федеральное государственное бюджетное образовательное учреждение высшего образования «Российская академия музыки имени Гнесиных»",
+      "academic_year": "2026-2027",
+      "type": "olympiad",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Теория и история музыки",
+          "level": "Высший уровень"
+        }
+      ],
+      "minpros_level": "Высший уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.3",
+      "source_pdf_pages": [
+        14,
+        15
+      ],
+      "title": "«Единство в различии» — Международный конкурс эссе",
+      "organizer": "Автономная некоммерческая организация центр инноваций и развития языкового образования «Единство в различии»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Иностранные языки (Эссе на иностранном языке)",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "mixed",
+      "audience_evidence": "Прямо указано: для учащихся 7–11 классов и студентов 1–3 курсов (PDF, страница 15). Уровень образования студентов не уточнен; допуск СПО неизвестен.",
+      "review_status": "needs_review",
+      "extraction_notes": "Сохранена надежно прочитанная часть названия. Полное многоязычное название переносится между страницами и требует ручной проверки; черновик автоматически не создавать.",
+      "hold_for_review": true,
+      "spo": "",
+      "eligibility_comment": "Прямо указано: для учащихся 7–11 классов и студентов 1–3 курсов (PDF, страница 15). Уровень образования студентов не уточнен; допуск СПО неизвестен.",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_title_reliable_fragment": "Международный конкурс эссе на русском как иностранном, китайском, английском, французском и испанском языках для учащихся 7–11 классов и студентов 1–3 курсов (индивидуальный и командный)",
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.4",
+      "source_pdf_pages": [
+        15
+      ],
+      "title": "12-ая Всероссийская олимпиада по судостроению",
+      "organizer": "Акционерное общество «Производственное объединение «Северное машиностроительное предприятие»",
+      "academic_year": "2026-2027",
+      "type": "olympiad",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Судостроение",
+          "level": "II уровень"
+        }
+      ],
+      "minpros_level": "II уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.5",
+      "source_pdf_pages": [
+        15
+      ],
+      "title": "81-я Международная молодежная научная конференция «Нефть и газ - 2027»",
+      "organizer": "Федеральное государственное автономное образовательное учреждение высшего образования «Российский государственный университет нефти и газа (национальный исследовательский университет) имени И.М. Губкина»",
+      "academic_year": "2026-2027",
+      "type": "conference",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Научная и инженерно-техническая деятельность",
+          "level": "I уровень"
+        }
+      ],
+      "minpros_level": "I уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.6",
+      "source_pdf_pages": [
+        15
+      ],
+      "title": "I (XI) Всероссийский фестиваль-конкурс «Наследники Вселенной»",
+      "organizer": "Государственное бюджетное учреждение дополнительного образования «Дворец учащейся молодежи Санкт-Петербурга»",
+      "academic_year": "2026-2027",
+      "type": "festival",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "3D-моделирование «Вселенная в 3D»",
+          "level": "Не установлен"
+        },
+        {
+          "profile": "Декоративно-прикладное творчество «На орбите творчества»",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Литературное творчество «Письмо космонавту»",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Рисунок «Космос глазами детей»",
+          "level": "III уровень"
+        }
+      ],
+      "minpros_level": "Не установлен; III уровень; IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.75",
+      "source_pdf_pages": [
+        31
+      ],
+      "title": "VII межмуниципальный фестиваль - конкурс имени заслуженного работника культуры Российской Федерации Николая Александровича Котина «Содружество талантов»",
+      "organizer": "Муниципальное бюджетное учреждение дополнительного образования «Детская школа искусств» муниципального района Борский Самарской области",
+      "academic_year": "2026-2027",
+      "type": "festival",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Инструментальное исполнительство, вокальное творчество",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.76",
+      "source_pdf_pages": [
+        31
+      ],
+      "title": "VII межрегиональный открытый конкурс исследовательских работ и проектов естественно-научной направленности им. П.А. Мантейфеля",
+      "organizer": "Муниципальное автономное учреждение «Красноярский парк флоры и фауны «Роев ручей»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Исследовательские работы и проекты естественно-научной направленности: Ботаника с основами экологии растений; Валеология с основами экологии; Зоология беспозвоночных и позвоночных животных; Прикладная биотехнология и ветеринарная медицина; Физическая география: геология, землеведение, почвоведение, ландшафтоведение, биогеография; Экология: методы исследования загрязнений окружающей среды",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.77",
+      "source_pdf_pages": [
+        31
+      ],
+      "title": "VII Открытый окружной конкурс по музыкально-теоретическим дисциплинам",
+      "organizer": "Бюджетное профессиональное образовательное учреждение Ханты-Мансийского автономного округа - Югры «Сургутский музыкальный колледж»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Музыкально-теоретические дисциплины",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.250",
+      "source_pdf_pages": [
+        80
+      ],
+      "title": "Всероссийская ярмарка технологических проектов «Маяк в будущее»",
+      "organizer": "Автономная некоммерческая организация Детский технопарк «Кванториум»",
+      "academic_year": "2026-2027",
+      "type": "other",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Информационные и цифровые технологии",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Промышленный дизайн и инжиниринг",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Робототехнические и транспортные системы",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Химические и биотехнологии",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "III уровень; IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.251",
+      "source_pdf_pages": [
+        80
+      ],
+      "title": "Всероссийские молодежные робототехнические соревнования «ЕВРОБОТ-Россия» (с международным участием)",
+      "organizer": "Некоммерческое партнерство Национальный организационный комитет международных робототехнических соревнований «ЕВРОБОТ»",
+      "academic_year": "2026-2027",
+      "type": "other",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Робототехника",
+          "level": "II уровень"
+        }
+      ],
+      "minpros_level": "II уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.252",
+      "source_pdf_pages": [
+        80
+      ],
+      "title": "Всероссийские соревнования по легкоатлетическому четырехборью «Шиповка юных» (в помещении) среди обучающихся общеобразовательных организаций",
+      "organizer": "Общероссийская общественная организация «Всероссийская федерация легкой атлетики»",
+      "academic_year": "2026-2027",
+      "type": "other",
+      "categories": "",
+      "minpros_direction": "Физическая культура и спорт",
+      "minpros_profiles": [
+        {
+          "profile": "Легкая атлетика",
+          "level": "I уровень"
+        }
+      ],
+      "minpros_level": "I уровень",
+      "audience": "school",
+      "audience_evidence": "Прямо указано: среди обучающихся общеобразовательных организаций (PDF, страница 80).",
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "0",
+      "eligibility_comment": "Прямо указано: среди обучающихся общеобразовательных организаций (PDF, страница 80).",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.352",
+      "source_pdf_pages": [
+        120
+      ],
+      "title": "Всероссийский научно-технический конкурс «ИнтЭРА»",
+      "organizer": "Федеральное государственное бюджетное учреждение «Фонд содействия развитию малых форм предприятий в научно-технической сфере»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Беспилотные летательные аппараты",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Виртуальный инжиниринг",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Композитные материалы",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Морская надводная робототехника",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Сухопутная робототехника",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Электронная компонентная база",
+          "level": "III уровень"
+        }
+      ],
+      "minpros_level": "III уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.411",
+      "source_pdf_pages": [
+        141
+      ],
+      "title": "Ежегодный межрегиональный открытый фестиваль научно-исследовательских и проектных работ с презентацией на иностранных языках «Мир без границ»",
+      "organizer": "Областное государственное автономное общеобразовательное учреждение «Образовательный комплекс «Алгоритм Успеха» Белгородской области",
+      "academic_year": "2026-2027",
+      "type": "festival",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Астрономия",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Биология",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "География",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Информатика",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Математика",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Физика",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Химия",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Экология",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.558",
+      "source_pdf_pages": [
+        181
+      ],
+      "title": "Межрегиональный конкурс исследовательских и проектных работ школьников «Мои первые шаги в науку»",
+      "organizer": "Федеральное государственное бюджетное образовательное учреждение высшего образования «Удмуртский государственный университет»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Герои Удмуртии (краеведение)",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Краеведение (удмуртское)",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Кулинарные традиции финно-угорских народов",
+          "level": "Не установлен"
+        },
+        {
+          "profile": "Проектные инициативы",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Традиции и обычаи удмуртского народа (фольклористика)",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Удмуртское языкознание и литературоведение",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень; Не установлен",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": "В названии есть слово «школьников», но отдельные условия допуска не приведены; аудитория не выведена только из названия.",
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.559",
+      "source_pdf_pages": [
+        181
+      ],
+      "title": "Межрегиональный конкурс научно-образовательного медиаконтента «Научная прогулка»",
+      "organizer": "Федеральное государственное бюджетное образовательное учреждение высшего образования «Нижегородский государственный педагогический университет имени Козьмы Минина»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Биология",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Физика",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Химия",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.560",
+      "source_pdf_pages": [
+        181
+      ],
+      "title": "Межрегиональный конкурс по игровой разработке «Game Jam»",
+      "organizer": "Департамент информатизации Тюменской области",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Техническая направленность (Разработка компьютерных игр, 3D-моделирование)",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.750",
+      "source_pdf_pages": [
+        240
+      ],
+      "title": "Открытый интеллектуальный конкурс творческих и проектно-исследовательских работ «АбитурИОН»",
+      "organizer": "Федеральное государственное бюджетное образовательное учреждение высшего образования «Российская академия народного хозяйства и государственной службы при Президенте Российской Федерации»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Глобальная история",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Искусства и гуманитарные науки",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Креативные индустрии и цифровые проекты",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Отечественная история",
+          "level": "Не установлен"
+        },
+        {
+          "profile": "Политология, публичная политика и социальные науки",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Психология, психология служебной деятельности",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Реклама и связи с общественностью",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Социология",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Урбанистика и городские исследования",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень; Не установлен",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.751",
+      "source_pdf_pages": [
+        240
+      ],
+      "title": "Открытый конкурс «ФЛОПС»",
+      "organizer": "Государственное бюджетное учреждение дополнительного профессионального образования Самарской области «Новокуйбышевский ресурсный центр»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Инженерные состязания",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.859",
+      "source_pdf_pages": [
+        270
+      ],
+      "title": "Региональный открытый конкурс народного музыкального творчества «Здравствуй, Масленица!»",
+      "organizer": "Муниципальное бюджетное учреждение дополнительного образования Детская школа искусств «Времена года»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Народное музыкальное творчество (Исполнение народной песни)",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.860",
+      "source_pdf_pages": [
+        270
+      ],
+      "title": "Региональный открытый турнир любителей математики, посвященный памяти Заслуженного учителя Российской Федерации Игоря Васильевича Чуя",
+      "organizer": "Государственное общеобразовательное учреждение Ярославской области «Средняя школа № 33 им. К. Маркса с углубленным изучением математики»",
+      "academic_year": "2026-2027",
+      "type": "other",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Математика",
+          "level": "III уровень"
+        }
+      ],
+      "minpros_level": "III уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.861",
+      "source_pdf_pages": [
+        270
+      ],
+      "title": "Региональный профориентационный технологический конкурс «ИНЖЕНЕРНЫЕ КАДРЫ РОССИИ» (ИКаР)",
+      "organizer": "Государственное бюджетное учреждение дополнительного образования «Дом юношеского технического творчества Челябинской области»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Робототехника",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.862",
+      "source_pdf_pages": [
+        270
+      ],
+      "title": "Региональный творческий конкурс среди обучающихся образовательных организаций Санкт-Петербурга «Спортивный репортер»",
+      "organizer": "Государственное бюджетное нетиповое образовательное учреждение г. Санкт-Петербурга «Балтийский берег»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Физическая культура и спорт",
+      "minpros_profiles": [
+        {
+          "profile": "Медианаправление",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.863",
+      "source_pdf_pages": [
+        270
+      ],
+      "title": "Региональный фестиваль конкурс по образовательной робототехнике «Р2Д2»",
+      "organizer": "Государственное бюджетное учреждение дополнительного образования «Тверской областной Центр юных техников»",
+      "academic_year": "2026-2027",
+      "type": "festival",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Робототехника",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.947",
+      "source_pdf_pages": [
+        295
+      ],
+      "title": "Физико-математическая олимпиада МИЭТ",
+      "organizer": "Федеральное государственное автономное образовательное учреждение высшего образования «Национальный исследовательский университет «Московский институт электронной техники»",
+      "academic_year": "2026-2027",
+      "type": "olympiad",
+      "categories": "",
+      "minpros_direction": "Наука и образование",
+      "minpros_profiles": [
+        {
+          "profile": "Математика",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Физика",
+          "level": "III уровень"
+        }
+      ],
+      "minpros_level": "III уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.971",
+      "source_pdf_pages": [
+        301
+      ],
+      "title": "Всероссийский конкурс творческих достижений «Культурное достояние России»",
+      "organizer": "Межрегиональная общественная организация творческого развития «Будущее планеты»",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Вокал",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Декоративно-прикладное искусство",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Изобразительное искусство",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Инструментальное искусство",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Театральное искусство",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Театры моды",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Хореография",
+          "level": "III уровень"
+        },
+        {
+          "profile": "Художественное слово",
+          "level": "IV уровень"
+        },
+        {
+          "profile": "Цирковое искусство",
+          "level": "IV уровень"
+        }
+      ],
+      "minpros_level": "III уровень; IV уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    },
+    {
+      "minpros_item_number": "6.972",
+      "source_pdf_pages": [
+        301
+      ],
+      "title": "Всероссийский семейный конкурс «Мама, почитай мне, а я нарисую»",
+      "organizer": "Индивидуальный предприниматель Аленина Елена Александровна",
+      "academic_year": "2026-2027",
+      "type": "contest",
+      "categories": "",
+      "minpros_direction": "Искусство и культура",
+      "minpros_profiles": [
+        {
+          "profile": "Книжная иллюстрация",
+          "level": "II уровень"
+        }
+      ],
+      "minpros_level": "II уровень",
+      "audience": "unknown",
+      "audience_evidence": null,
+      "review_status": "needs_review",
+      "extraction_notes": null,
+      "hold_for_review": false,
+      "spo": "",
+      "eligibility_comment": "",
+      "source_document": "docs/sources/Приказ_Минпросвещения_598_текстовый.pdf",
+      "visually_checked": true,
+      "source_citation": "Приказ Минпросвещения РФ №598, перечень 2026/2027"
+    }
+  ]
+}
