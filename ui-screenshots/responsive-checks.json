@@ -1,0 +1,194 @@
+[
+  {
+    "page": "home",
+    "width": 1440,
+    "content": 1425,
+    "viewport": 1425
+  },
+  {
+    "page": "home",
+    "width": 1024,
+    "content": 1009,
+    "viewport": 1009
+  },
+  {
+    "page": "home",
+    "width": 768,
+    "content": 753,
+    "viewport": 753
+  },
+  {
+    "page": "home",
+    "width": 390,
+    "content": 375,
+    "viewport": 375
+  },
+  {
+    "page": "catalog",
+    "width": 1440,
+    "content": 1425,
+    "viewport": 1425
+  },
+  {
+    "page": "catalog",
+    "width": 1024,
+    "content": 1009,
+    "viewport": 1009
+  },
+  {
+    "page": "catalog",
+    "width": 768,
+    "content": 753,
+    "viewport": 753
+  },
+  {
+    "page": "catalog",
+    "width": 390,
+    "content": 375,
+    "viewport": 375
+  },
+  {
+    "page": "teacher-dashboard",
+    "width": 1440,
+    "content": 1425,
+    "viewport": 1425
+  },
+  {
+    "page": "teacher-dashboard",
+    "width": 1024,
+    "content": 1009,
+    "viewport": 1009
+  },
+  {
+    "page": "teacher-dashboard",
+    "width": 768,
+    "content": 753,
+    "viewport": 753
+  },
+  {
+    "page": "teacher-dashboard",
+    "width": 390,
+    "content": 375,
+    "viewport": 375
+  },
+  {
+    "page": "group",
+    "width": 1440,
+    "content": 1425,
+    "viewport": 1425
+  },
+  {
+    "page": "group",
+    "width": 1024,
+    "content": 1009,
+    "viewport": 1009
+  },
+  {
+    "page": "group",
+    "width": 768,
+    "content": 753,
+    "viewport": 753
+  },
+  {
+    "page": "group",
+    "width": 390,
+    "content": 375,
+    "viewport": 375
+  },
+  {
+    "page": "student-profile",
+    "width": 1440,
+    "content": 1425,
+    "viewport": 1425
+  },
+  {
+    "page": "student-profile",
+    "width": 1024,
+    "content": 1009,
+    "viewport": 1009
+  },
+  {
+    "page": "student-profile",
+    "width": 768,
+    "content": 753,
+    "viewport": 753
+  },
+  {
+    "page": "student-profile",
+    "width": 390,
+    "content": 375,
+    "viewport": 375
+  },
+  {
+    "page": "organizer",
+    "width": 1440,
+    "content": 1425,
+    "viewport": 1425
+  },
+  {
+    "page": "organizer",
+    "width": 1024,
+    "content": 1009,
+    "viewport": 1009
+  },
+  {
+    "page": "organizer",
+    "width": 768,
+    "content": 753,
+    "viewport": 753
+  },
+  {
+    "page": "organizer",
+    "width": 390,
+    "content": 375,
+    "viewport": 375
+  },
+  {
+    "page": "moderator",
+    "width": 1440,
+    "content": 1425,
+    "viewport": 1425
+  },
+  {
+    "page": "moderator",
+    "width": 1024,
+    "content": 1009,
+    "viewport": 1009
+  },
+  {
+    "page": "moderator",
+    "width": 768,
+    "content": 753,
+    "viewport": 753
+  },
+  {
+    "page": "moderator",
+    "width": 390,
+    "content": 375,
+    "viewport": 375
+  },
+  {
+    "page": "moderator-queue",
+    "width": 1440,
+    "content": 1425,
+    "viewport": 1425
+  },
+  {
+    "page": "moderator-queue",
+    "width": 1024,
+    "content": 1009,
+    "viewport": 1009
+  },
+  {
+    "page": "moderator-queue",
+    "width": 768,
+    "content": 753,
+    "viewport": 753
+  },
+  {
+    "page": "moderator-queue",
+    "width": 390,
+    "content": 375,
+    "viewport": 375
+  }
+]

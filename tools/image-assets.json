@@ -1,0 +1,87 @@
+[
+  {
+    "key": "it",
+    "file": "it.jpg",
+    "prompt": "an elegant small open laptop displaying only abstract code shapes, glass circuit tiles and a tiny blue cursor, programming and information technology"
+  },
+  {
+    "key": "science",
+    "file": "science.jpg",
+    "prompt": "a graceful laboratory microscope, two glass flasks and a tiny atom model, scientific research"
+  },
+  {
+    "key": "math",
+    "file": "math.jpg",
+    "prompt": "a sculptural geometric construction of sphere, cone, golden compass and translucent cube, mathematics"
+  },
+  {
+    "key": "languages",
+    "file": "languages.jpg",
+    "prompt": "an open dictionary with blank page lines, two sculptural speech bubbles and a small terrestrial globe, language learning"
+  },
+  {
+    "key": "humanities",
+    "file": "humanities.jpg",
+    "prompt": "a cream open book, rolled archival scroll and a miniature classical column, history and literature"
+  },
+  {
+    "key": "economics",
+    "file": "economics.jpg",
+    "prompt": "a small blue bar chart sculpture, gold coins and a mechanical calculator with blank keys, economics and law"
+  },
+  {
+    "key": "pedagogy",
+    "file": "pedagogy.jpg",
+    "prompt": "two books, three simple abstract human figures gathered around a learning board with geometric diagrams, teaching and social projects"
+  },
+  {
+    "key": "art",
+    "file": "art.jpg",
+    "prompt": "a sculptural artist palette with restrained pastel paint, brushes, pencil and small flowing theatre curtain, art music and creative performance"
+  },
+  {
+    "key": "design",
+    "file": "design.jpg",
+    "prompt": "a blue drafting tablet with geometric drawing, a small sculptural chair and swatch cards, design and 3D graphics"
+  },
+  {
+    "key": "engineering",
+    "file": "engineering.jpg",
+    "prompt": "a friendly compact robot arm, brass gear and translucent mechanical part, engineering and robotics"
+  },
+  {
+    "key": "ecology",
+    "file": "ecology.jpg",
+    "prompt": "a small globe, lush single leaf sprout growing in a ceramic pot and a clear droplet, ecology and geography"
+  },
+  {
+    "key": "sport",
+    "file": "sport.jpg",
+    "prompt": "a cream athletic shoe, blue ball, subtle gold medal and curved ribbon, sport and physical activity"
+  },
+  {
+    "key": "media",
+    "file": "media.jpg",
+    "prompt": "a cream camera with blue glass lens, film strip and tiny play triangle sculpture, photography video and animation"
+  },
+  {
+    "key": "general",
+    "file": "general.jpg",
+    "prompt": "a sculptural open book and a polished golden award cup with a blue ribbon, educational achievements"
+  },
+  {
+    "key": "music",
+    "file": "music.jpg",
+    "prompt": "a small ivory grand piano with golden strings and a blue sculptural musical note, music and vocal performance"
+  },
+  {
+    "key": "performance",
+    "file": "performance.jpg",
+    "prompt": "a pair of elegant ballet shoes, two small expressive theatrical masks, and soft curved blue stage curtains, dance and performing arts"
+  },
+  {
+    "key": "space",
+    "file": "space.jpg",
+    "prompt": "a beautiful small astronomical telescope, a blue ringed planet and a golden orbital model, physics and astronomy"
+  }
+]
