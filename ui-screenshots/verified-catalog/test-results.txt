@@ -1,0 +1,5 @@
+PASSED 58
+FAILED 0
+SKIPPED 0
+HTTP subpath: /spo-competitions/
+Widths: 1440, 1024, 768, 390

@@ -1,0 +1,218 @@
+[
+  {
+    "key": "it-planet",
+    "remoteUrl": "https://world-it-planet.org/olymp/assets/img/logo/logo_planet_new_white.svg",
+    "kind": "logo",
+    "background": "#172f59",
+    "sourcePage": "https://olymp.world-it-planet.org/",
+    "path": "./assets/images/official/it-planet.svg",
+    "bytes": 2803
+  },
+  {
+    "key": "artmasters",
+    "remoteUrl": "https://static.tildacdn.com/tild6461-3035-4230-b761-396265376330/logo_AM_wh-01.svg",
+    "kind": "logo",
+    "background": "#25213b",
+    "sourcePage": "https://artmasters.ru/",
+    "path": "./assets/images/official/artmasters.svg",
+    "bytes": 6343
+  },
+  {
+    "key": "unlimited",
+    "remoteUrl": "https://upcontest.ru/img/upcontest/logo.svg",
+    "kind": "logo",
+    "background": "#182d4d",
+    "sourcePage": "https://upcontest.ru/",
+    "path": "./assets/images/official/unlimited.svg",
+    "bytes": 8987
+  },
+  {
+    "key": "sporttech",
+    "remoteUrl": "https://sporttechcup.ru/assets/img/kubok_small.png",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://sporttechcup.ru/",
+    "path": "./assets/images/official/sporttech.png",
+    "bytes": 124159
+  },
+  {
+    "key": "terra",
+    "remoteUrl": "https://terra-politech.ru/assets/img/terra_politech_black.png",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://terra-politech.ru/",
+    "path": "./assets/images/official/terra.png",
+    "bytes": 9483
+  },
+  {
+    "key": "trajectory",
+    "remoteUrl": "https://tbolimpiada.ru/design/images/logos/logo.png",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://tbolimpiada.ru/",
+    "path": "./assets/images/official/trajectory.png",
+    "bytes": 9970
+  },
+  {
+    "key": "abilympics",
+    "remoteUrl": "https://abilympics-russia.ru/tm/build/dev/img/logo.svg",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://abilympics-russia.ru/arhiv/natsionalnyy-chempionat-2025/",
+    "path": "./assets/images/official/abilympics.svg",
+    "bytes": 2627
+  },
+  {
+    "key": "professionals",
+    "remoteUrl": "https://pro.firpo.ru/tm/tm_4/assets/img/logo.svg",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://pro.firpo.ru/",
+    "path": "./assets/images/official/professionals.svg",
+    "bytes": 22504
+  },
+  {
+    "key": "student-year",
+    "remoteUrl": "https://www.ruy.ru/upload/dev2fun_opengraph/983/k9ebdrkzw7ax5tic1up7w6q4bdu2ayln.jpg",
+    "kind": "photo",
+    "background": "#ffffff",
+    "sourcePage": "https://www.ruy.ru/projects/student-goda/",
+    "path": "./assets/images/official/student-year.jpg",
+    "bytes": 162582
+  },
+  {
+    "key": "movement",
+    "remoteUrl": "https://xn--90acagbhgpca7c8c7f.xn--p1ai/local/templates/movement-first/icons/logo-red.svg",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://xn--90acagbhgpca7c8c7f.xn--p1ai/news/klassnye-vstrechi-master-klassy-i-lektsii-kak-proshel-pervyy-den-finala-vserossiyskogo-konkursa-flag/",
+    "path": "./assets/images/official/movement.svg",
+    "bytes": 5232
+  },
+  {
+    "key": "nto",
+    "remoteUrl": "https://ntcontest.ru/local/templates/main/img/logo.svg",
+    "kind": "logo",
+    "background": "#182d4d",
+    "sourcePage": "https://ntcontest.ru/",
+    "path": "./assets/images/official/nto.svg",
+    "bytes": 15984
+  },
+  {
+    "key": "nto-junior",
+    "remoteUrl": "https://static.tildacdn.com/tild3135-6361-4165-b562-303336383134/_.png",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://junior.ntcontest.ru/",
+    "path": "./assets/images/official/nto-junior.png",
+    "bytes": 11508
+  },
+  {
+    "key": "zvezda-organizer",
+    "remoteUrl": "https://www.ulsu.ru/static/img/logo150_v20260909c.svg",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://www.ulsu.ru/ru/sveden/struct/star/",
+    "path": "./assets/images/official/zvezda-organizer.jpg",
+    "bytes": 98393
+  },
+  {
+    "key": "finatlon",
+    "remoteUrl": "https://fin-olimp.ru/wp-content/uploads/logo-1.jpg",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://fin-olimp.ru/",
+    "path": "./assets/images/official/finatlon.jpg",
+    "bytes": 61923
+  },
+  {
+    "key": "lomonosov",
+    "remoteUrl": "https://olymp.msu.ru/layout/layout3/img/olymp-logo.png?v=1528439501",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://olymp.msu.ru/",
+    "path": "./assets/images/official/lomonosov.png",
+    "bytes": 23869
+  },
+  {
+    "key": "phystech",
+    "remoteUrl": "https://olymp-online.mipt.ru/application/modules/Sites/externals/images/olymponline2019/logo.png",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://olymp-online.mipt.ru/",
+    "path": "./assets/images/official/phystech.png",
+    "bytes": 17339
+  },
+  {
+    "key": "sfu",
+    "remoteUrl": "https://dovuz.sfu.ru/simai.data/image/logo/logo.png",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://dovuz.sfu.ru/abiturientu-sfu/olimpiady/belchonok/podgotovka-k-olympiade-belchonok/",
+    "path": "./assets/images/official/sfu.png",
+    "bytes": 29932
+  },
+  {
+    "key": "izumrud-organizer",
+    "remoteUrl": "https://dovuz.urfu.ru/sources/img/logo.png",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://dovuz.urfu.ru/olymps/izumrud/final-results?year=2024",
+    "path": "./assets/images/official/izumrud-organizer.png",
+    "bytes": 9752
+  },
+  {
+    "key": "mephi",
+    "remoteUrl": "https://mephi.ru/content/public/uploads/files/news/logotip-mifi-rgb_001.png",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://old.olimpiadakurchatov.ru/",
+    "path": "./assets/images/official/mephi.png",
+    "bytes": 15304
+  },
+  {
+    "key": "kurchatov-organizer",
+    "remoteUrl": "https://old.olimpiadakurchatov.ru/upload/images/nrcki_logo.png",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://old.olimpiadakurchatov.ru/",
+    "path": "./assets/images/official/kurchatov-organizer.png",
+    "bytes": 23834
+  },
+  {
+    "key": "technocup",
+    "remoteUrl": "https://static.tildacdn.com/tild3330-3331-4561-b837-626132333066/logo.svg",
+    "kind": "logo",
+    "background": "#182d4d",
+    "sourcePage": "https://techno-cup.ru/",
+    "path": "./assets/images/official/technocup.svg",
+    "bytes": 841
+  },
+  {
+    "key": "higher-test",
+    "remoteUrl": "https://talent.hse.ru/mirror/pubs/share/777764678",
+    "kind": "logo",
+    "background": "#ffffff",
+    "sourcePage": "https://talent.hse.ru/olimp/mmo",
+    "path": "./assets/images/official/higher-test.svg",
+    "bytes": 19790
+  },
+  {
+    "key": "big-change-photo",
+    "remoteUrl": "https://s3.xn--90acagbhgpca7c8c7f.xn--p1ai/vk_backup/resize_cache/35113/da711a5bfc8979754fc3c9422e7fceb1/iblock/cdd/cdd0358b9c323fce3dc9a480c3994195/bf7c3ef4cb1297b3590112b54a053f34.jpg",
+    "kind": "photo",
+    "background": "#ffffff",
+    "sourcePage": "https://xn--90acagbhgpca7c8c7f.xn--p1ai/news/v-nizhnem-novgorode-proshyel-final-bolshoy-peremeny-sredi-studentov-kolledzhey-i-tekhnikumov/",
+    "path": "./assets/images/official/big-change-photo.jpg",
+    "bytes": 35828
+  },
+  {
+    "key": "finsprint-organizer",
+    "remoteUrl": "https://vbudushee.ru/v2/og.jpg",
+    "kind": "cover",
+    "background": "#ffffff",
+    "sourcePage": "https://vbudushee.ru/about/news/konkurs-finsprint-zavershilsya/",
+    "path": "./assets/images/official/finsprint-organizer.jpg",
+    "bytes": 14098
+  }
+]
