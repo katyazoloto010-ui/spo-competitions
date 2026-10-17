@@ -4,7 +4,6 @@
   const app = document.querySelector('#app');
   const topics = window.CompetitionTopics;
   const audienceLabels = { unknown: 'Аудитория уточняется', school: 'Школьники', spo: 'Студенты СПО', mixed: 'Разные категории участников' };
-  const statusLabels = { needs_review: 'Сведения уточняются', verified: 'Название и источник проверены', rejected: 'Требуется уточнение', concept: 'Концепт проекта' };
   const route = location.pathname.split('/').pop() || 'index.html';
   let official = [], showcase = [], categories = [], records = [];
   let toastTimer;
@@ -67,20 +66,26 @@
   }
   function description(record) { return record.description || topics.get(record.category).description; }
   function sourceLabel(record) { return record.dataType === 'showcase' ? 'Коллекция «Практика» · концепт' : record.source || 'Источник уточняется'; }
+  const seasonLabels = { announced: 'Сезон 2026/2027', awaiting_announcement: 'Ожидается анонс' };
   function eventStatus(record) {
-    if (record.competitionStatus === 'completed') return `Завершено · сезон ${record.edition || record.academicYear}`;
-    if (record.eventDate && record.eventDate < today()) return `Завершено · ${dateLabel(record.eventDate)}`;
-    if (record.eventDate) return dateLabel(record.eventDate);
-    return 'Даты уточняются';
+    if (!record.seasonConfirmed) return '2027 год · анонс ожидается';
+    if (record.eventDate) return record.eventEndDate && record.eventEndDate !== record.eventDate ? `${dateLabel(record.eventDate)} — ${dateLabel(record.eventEndDate)}` : dateLabel(record.eventDate);
+    return record.dateText || '2027 год · сроки уточняются';
   }
+  function visual(record, hero = false) {
+    const media=record.image;
+    if (!media) return `<div class="identity-placeholder"><span>${escape(record.title)}</span></div>`;
+    return `<img src="${escape(media.src)}" alt="${escape(media.alt)}" width="960" height="640" ${hero ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+  }
+  function mediaClass(record) { return record.image?.kind === 'photo' ? 'official-photo' : 'official-logo'; }
+  function mediaBackground(record) { return /^#[0-9a-f]{6}$/i.test(record.image?.background || '') ? record.image.background : '#f1f5f9'; }
   function card(record, heading = 'h3') {
-    const topic = topics.get(record.category);
+    const topic=topics.get(record.category);
     return `<article class="event-card" data-record-id="${escape(record.id)}" data-type="${escape(record.dataType)}">
-      <a class="card-visual" href="${urlFor(record)}" tabindex="-1" aria-hidden="true"><img src="${topic.image}" alt="" width="960" height="640" loading="lazy" decoding="async"></a>
+      <a class="card-visual ${mediaClass(record)}" style="background:${mediaBackground(record)}" href="${urlFor(record)}" tabindex="-1" aria-hidden="true">${visual(record)}</a>
       <div class="card-body"><p class="card-category">${escape(topic.label)}</p><${heading} class="card-title"><a href="${urlFor(record)}">${escape(record.title)}</a></${heading}>
-      <p class="card-description">${escape(description(record))}</p><p class="card-date"><span aria-hidden="true">◷</span> ${escape(eventStatus(record))}</p>
-      <p class="card-source">${escape(sourceLabel(record))}<br>${escape(record.edition || record.academicYear || 'Сезон уточняется')}${record.sourceNumber ? ` · № ${escape(record.sourceNumber)}` : ''}</p>
-      <p class="card-status">${escape(statusLabels[record.verificationStatus] || 'Сведения уточняются')}</p>
+      <p class="card-description">${escape(description(record))}</p><p class="card-date">${escape(eventStatus(record))}</p>
+      <p class="card-source">${escape(audienceLabels[record.audience])}</p>
       <div class="card-actions"><a class="detail-link" href="${urlFor(record)}">Подробнее <span aria-hidden="true">↗</span></a>${saveButton(record)}</div></div></article>`;
   }
   function sectionHeading(title, text, href, label) {
@@ -90,51 +95,43 @@
     return `<section class="final-cta shell"><div><p class="eyebrow">Следующий шаг — ваш</p><h2>Найдите задачу,<br>которая увлечёт.</h2><p>Выберите направление и откройте для себя новые возможности.</p></div><div class="cta-actions"><a class="btn btn-white" href="./competitions.html">Перейти в каталог ↗</a><a href="./competitions.html#filters">Найти олимпиаду</a></div></section>`;
   }
   function renderHome() {
-    const upcoming = official.slice(0,3);
-    const selected = [], used = new Set();
-    for (const record of official) {
-      if (!used.has(record.category)) { selected.push(record); used.add(record.category); }
-      if (selected.length === 3) break;
-    }
-    const counts = Object.fromEntries(categories.map(category => [category, official.filter(record => record.category === category).length]));
-    const featuredCategories = ['Информатика, ИТ и программирование', 'Иностранные языки', 'Обществознание, право и экономика', 'Педагогика и социальные проекты', 'Дизайн, компьютерная графика и 3D', 'Исследовательские и проектные конкурсы', 'Изобразительное искусство и рисунок', 'Экология, география и сельское хозяйство'].filter(category => categories.includes(category));
-    const orderedCategories = [...featuredCategories, ...categories.filter(category => !featuredCategories.includes(category)).sort((a,b) => counts[b] - counts[a])];
-    const directionCard = category => {
-      const topic = topics.get(category);
-      return `<a class="direction-card" href="./competitions.html?category=${encodeURIComponent(category)}"><img src="${topic.image}" alt="" width="96" height="64" loading="lazy"><div><h3>${escape(topic.label)}</h3><span>${counts[category]} мероприятий</span></div><span class="direction-arrow" aria-hidden="true">↗</span></a>`;
-    };
-    app.className = 'home-page';
-    app.innerHTML = `<section class="landing-hero shell"><div class="hero-copy"><p class="eyebrow"><span class="eyebrow-dot"></span> Возможности для студентов колледжей</p><h1>Ваш интерес.<br>Ваш следующий<br><span>большой шаг.</span></h1><p class="hero-intro">Находите олимпиады и конкурсы, пробуйте новое и превращайте знания в опыт. Всё начинается с подходящей задачи.</p><div class="hero-actions"><a class="btn" href="./competitions.html">Смотреть олимпиады <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="./competitions.html#filters">Найти подходящие</a></div><p class="hero-note">Без регистрации · Сохраняйте то, что интересно</p></div><div class="hero-visual"><img src="./assets/hero-success-path.png" alt="Светлая лестница к вершине с кубком, книгами и символами образования" width="1672" height="941" fetchpriority="high"></div></section>
-      <div class="catalog-strip shell"><div><strong>${official.length}</strong><span>реальных мероприятий</span></div><div><strong>${categories.length}</strong><span>направлений интересов</span></div><div><strong>Архив</strong><span>прошедшие сезоны</span></div><a href="./sources.html">Источники и сезоны <span aria-hidden="true">↗</span></a></div>
-      <section class="section shell" id="upcoming"><p class="eyebrow">Реальные мероприятия</p>${sectionHeading('Прошедшие сезоны', 'Познакомьтесь с конкурсами и их организаторами. Эти сезоны завершены; сроки нового набора проверяйте на официальном сайте.', './competitions.html', 'Смотреть все мероприятия')}<div class="event-grid">${upcoming.length ? upcoming.map(record => card(record)).join('') : '<div class="empty-state"><h3>Новые программы готовятся</h3><p>Посмотрите коллекцию или выберите мероприятие из официального перечня.</p></div>'}</div><a class="section-bottom-link" href="./competitions.html">Смотреть все олимпиады →</a></section>
-      <section class="section direction-section" id="directions"><div class="shell">${sectionHeading('Начните с того, что вам близко', 'От технологий и языков до творчества и социальных проектов.', '', '')}<div class="direction-grid">${orderedCategories.slice(0,8).map(directionCard).join('')}</div><details class="all-directions"><summary>Все ${categories.length} направления <span aria-hidden="true">+</span></summary><div class="direction-grid">${orderedCategories.slice(8).map(directionCard).join('')}</div></details></div></section>
-      <section class="section shell" id="how-it-works">${sectionHeading('От интереса — к участию', 'Четыре простых шага, чтобы не потеряться в возможностях.', '', '')}<ol class="steps">${[['Выберите направление','Найдите то, что интересно именно вам: от программирования до искусства.'],['Изучите условия','Откройте карточку, проверьте даты и требования к участникам.'],['Узнайте подробности','Перейдите на сайт организатора, если подтверждённая ссылка доступна.'],['Сохраните важное','Вернитесь к понравившемуся мероприятию в удобное время.']].map(([title,text],i)=>`<li><span class="step-number">0${i+1}</span><h3>${title}</h3><p>${text}</p></li>`).join('')}</ol></section>
-      <section class="section shell" id="recommended">${sectionHeading('Стоит присмотреться', 'Реальные мероприятия разных направлений. Это знакомство с прошедшими сезонами, а не подтверждение открытой регистрации или допуска.', './competitions.html', 'Весь каталог')}<div class="event-grid">${selected.map(record => card(record)).join('')}</div></section>
-      <section class="section about-section" id="about"><div class="shell about-layout"><div><p class="eyebrow">Меньше поисков. Больше возможностей.</p><h2>Все ориентиры<br>в одном месте.</h2><p>Мы помогаем исследовать мир олимпиад и конкурсов. Вы выбираете интересное — мы собираем информацию в понятный каталог.</p></div><div class="benefit-list">${[['01','Официальный источник','Названия и сезоны сверены с сайтами организаторов и официальными публикациями. Ссылки на источники есть в каждой карточке.'],['02','Поиск без лишних шагов','Ищите по названию и направлению, уточняйте аудиторию и статус сведений.'],['03','Своя подборка','Сохраняйте мероприятия, чтобы не искать их заново. Регистрация не требуется.'],['04','Понятный следующий шаг','Подтверждённые ссылки ведут к организаторам. Если сведений пока нет, мы прямо об этом говорим.']].map(([number,title,text])=>`<div><span>${number}</span><div><h3>${title}</h3><p>${text}</p></div></div>`).join('')}</div></div></section>
-      ${finalCta()}<section class="project-note shell" id="project"><h2>О проекте</h2><p>«СПО / возможности» — проект информационной системы для студентов колледжей. Каталог содержит проверенную подборку реальных мероприятий прошедших сезонов. Здесь есть конкурсы для СПО и школьные олимпиады: аудитория указана отдельно. Новые сроки и условия участия уточняйте у организатора.</p><p>Проверены названия, сезоны и источники. Неизвестные даты, стоимость и формат не заполняются предположениями. <a href="./sources.html">Открыть все источники</a>.</p></section>`;
+    const choose = list => { const used=new Set();return list.filter(r=>{if(used.has(r.category))return false;used.add(r.category);return true;}).slice(0,3); };
+    const upcoming=choose(official.filter(r=>r.seasonConfirmed));
+    const selected=choose(official.filter(r=>!r.seasonConfirmed));
+    const counts=Object.fromEntries(categories.map(c=>[c,official.filter(r=>r.category===c).length]));
+    const directionCard=c=>`<a class="direction-card" href="./competitions.html?category=${encodeURIComponent(c)}"><div><h3>${escape(topics.get(c).label)}</h3><span>${counts[c]} мероприятий</span></div><span aria-hidden="true">↗</span></a>`;
+    app.className='home-page';
+    app.innerHTML=`<section class="landing-hero shell"><div class="hero-copy"><p class="eyebrow">Учебный год 2026/2027</p><h1>Олимпиады<br>и конкурсы<br><span>по вашим интересам.</span></h1><p class="hero-intro">Для школьников, студентов, учителей и организаторов. Выбирайте направление, знакомьтесь с условиями и сохраняйте интересные мероприятия.</p><div class="hero-actions"><a class="btn" href="./competitions.html">Смотреть олимпиады ↗</a><a class="btn btn-secondary" href="./competitions.html#filters">Выбрать направление</a></div></div><figure class="hero-visual event-hero-photo"><img src="./assets/images/official/big-change-photo.jpg" alt="Участники финала конкурса «Большая перемена»" width="960" height="640" fetchpriority="high"><figcaption>«Большая перемена» · фото Движения Первых</figcaption></figure></section>
+    <div class="catalog-strip shell"><div><strong>${official.length}</strong><span>олимпиад и конкурсов</span></div><div><strong>${categories.length}</strong><span>направлений</span></div><div><strong>2026/27</strong><span>учебный год</span></div><a href="./saved.html">Моя подборка ↗</a></div>
+    <section class="section shell" id="upcoming">${sectionHeading('Сезон 2026/2027','Олимпиады, которые уже объявили новый сезон.','./competitions.html?season=announced','Смотреть все')}<div class="event-grid">${upcoming.map(r=>card(r)).join('')}</div></section>
+    <section class="section direction-section" id="directions"><div class="shell">${sectionHeading('Направления','Выберите предмет или область, в которой хотите попробовать свои силы.','','')}<div class="direction-grid">${categories.map(directionCard).join('')}</div></div></section>
+    <section class="section shell" id="how-it-works">${sectionHeading('Как участвовать','','','')}<ol class="steps">${[['Найдите мероприятие','Ищите по названию, направлению или аудитории.'],['Изучите условия','Проверьте требования к участникам и расписание этапов.'],['Откройте сайт организатора','Подробная программа и регистрация находятся на официальном сайте.'],['Сохраните в подборку','Возвращайтесь к интересным олимпиадам в разделе «Сохранённые».']].map(([title,text],i)=>`<li><span class="step-number">0${i+1}</span><h3>${title}</h3><p>${text}</p></li>`).join('')}</ol></section>
+    <section class="section shell" id="recommended">${sectionHeading('Следите за новым набором','Конкурсы, к которым можно начать готовиться заранее.','./competitions.html?season=awaiting_announcement','Все конкурсы')}<div class="event-grid">${selected.map(r=>card(r)).join('')}</div></section>
+    <section class="section about-section" id="about"><div class="shell about-layout"><div><p class="eyebrow">О сервисе</p><h2>Найдите свою<br>олимпиаду.</h2><p>Предметные олимпиады, творческие конкурсы и чемпионаты профессионального мастерства — в одном каталоге.</p></div><div class="benefit-list">${[['Школьникам','Выбирайте предметные олимпиады и творческие конкурсы.'],['Студентам','Находите соревнования по специальности и новым интересам.'],['Учителям','Подбирайте мероприятия для учеников и собирайте свою подборку.'],['Организаторам','Знакомьтесь с мероприятиями вашего направления и их официальными страницами.']].map(([title,text],i)=>`<div><span>0${i+1}</span><div><h3>${title}</h3><p>${text}</p></div></div>`).join('')}</div></div></section>${finalCta()}`;
   }
   const selectOptions = (values, selected = '') => Object.entries(values).map(([value,label]) => `<option value="${escape(value)}" ${value === selected ? 'selected' : ''}>${escape(label)}</option>`).join('');
+
   function renderCatalog(saved = false) {
     app.className = 'shell catalog-page';
     const params = new URLSearchParams(location.search);
-    let collection = saved ? 'all' : (params.get('collection') === 'showcase' ? 'showcase' : params.get('collection') === 'local' ? 'local' : 'official');
-    app.innerHTML = `<div class="page-intro"><p class="eyebrow">${saved ? 'Ваша подборка' : 'Возможности для нового опыта'}</p><h1>${saved ? 'Сохранённые олимпиады' : 'Найдите свою олимпиаду'}</h1><p>${saved ? 'Все мероприятия, к которым вы хотите вернуться.' : `${official.length} реальных мероприятий прошедших сезонов. Регистрация на эти сезоны завершена; условия новых сезонов смотрите у организаторов.`}</p></div>
-      ${saved ? '' : `<nav class="collection-tabs" aria-label="Источник мероприятий"><a href="./competitions.html" ${collection === 'official' ? 'aria-current="page"' : ''}>Реальные мероприятия <span>${official.length}</span></a>${records.some(r=>r.dataType==='local') ? `<a href="./competitions.html?collection=local" ${collection === 'local' ? 'aria-current="page"' : ''}>Ваши предложения</a>` : ''}</nav>`}
+    let collection = saved ? 'all' : 'official';
+    app.innerHTML = `<div class="page-intro"><p class="eyebrow">${saved ? 'Ваша подборка' : 'Возможности для нового опыта'}</p><h1>${saved ? 'Сохранённые олимпиады' : 'Найдите свою олимпиаду'}</h1><p>${saved ? 'Все мероприятия, к которым вы хотите вернуться.' : `Олимпиады и конкурсы на учебный год 2026/2027. Выберите направление и аудиторию.`}</p></div>
+      ${saved ? '' : `<nav class="collection-tabs" aria-label="Источник мероприятий"><a href="./competitions.html" ${collection === 'official' ? 'aria-current="page"' : ''}>Все мероприятия <span>${official.length}</span></a>${records.some(r=>r.dataType==='local') ? `<a href="./competitions.html?collection=local" ${collection === 'local' ? 'aria-current="page"' : ''}>Ваши предложения</a>` : ''}</nav>`}
       ${collection === 'showcase' ? '<p class="collection-note">Авторские концепты мероприятий: программы и сроки придуманы для этой коллекции. Они не относятся к официальному перечню; набор участников не ведётся.</p>' : ''}
-      <form id="filters" class="catalog-filters" role="search"><label class="search-field"><span>Название олимпиады</span><input name="q" type="search" placeholder="Что вам интересно?" autocomplete="off"></label><label><span>Направление</span><select name="category">${selectOptions({'':'Все направления', ...Object.fromEntries(categories.map(c=>[c,topics.get(c).label]))})}</select></label><label><span>Аудитория</span><select name="audience">${selectOptions({'':'Любая',...audienceLabels})}</select></label><label><span>Статус сведений</span><select name="verification">${selectOptions({'':'Все статусы',...statusLabels})}</select></label><button type="reset" class="filter-reset">Сбросить фильтры</button></form>
+      <form id="filters" class="catalog-filters" role="search"><label class="search-field"><span>Название олимпиады</span><input name="q" type="search" placeholder="Что вам интересно?" autocomplete="off"></label><label><span>Направление</span><select name="category">${selectOptions({'':'Все направления', ...Object.fromEntries(categories.map(c=>[c,topics.get(c).label]))})}</select></label><label><span>Аудитория</span><select name="audience">${selectOptions({'':'Любая',...audienceLabels})}</select></label><label><span>Сезон</span><select name="season">${selectOptions({'':'Все мероприятия',...seasonLabels})}</select></label><button type="reset" class="filter-reset">Сбросить фильтры</button></form>
       <div class="result-toolbar"><p id="count" role="status" aria-live="polite"></p><span>24 записи на странице</span></div><div id="results" class="event-grid"></div><nav class="pager" aria-label="Страницы каталога"><button id="prev" class="btn btn-secondary" type="button">← Назад</button><span id="pagination"></span><button id="next" class="btn btn-secondary" type="button">Далее →</button></nav>`;
     const form = document.querySelector('#filters');
     let current = 1;
     function draw(fromUrl = false) {
       if (fromUrl) {
         const p = new URLSearchParams(location.search);
-        ['q','category','audience','verification'].forEach(name => { form.elements[name].value = p.get(name) || ''; });
+        ['q','category','audience','season'].forEach(name => { form.elements[name].value = p.get(name) || ''; });
         const requested = Number(p.get('page')); current = Number.isFinite(requested) ? Math.max(1,Math.floor(requested)) : 1;
       }
       const filter = Object.fromEntries(new FormData(form)), query = normalize(filter.q), ids = savedIds();
       const result = records.filter(record => (saved ? ids.includes(record.id) : record.dataType === collection)
         && normalize(record.title).includes(query) && (!filter.category || record.category === filter.category)
-        && (!filter.audience || record.audience === filter.audience) && (!filter.verification || record.verificationStatus === filter.verification));
+        && (!filter.audience || record.audience === filter.audience) && (!filter.season || record.competitionStatus === filter.season));
       const pages = Math.max(1,Math.ceil(result.length/24)); current = Math.min(current,pages);
       document.querySelector('#results').innerHTML = result.slice((current-1)*24,current*24).map(record=>card(record,'h2')).join('') || `<div class="empty-state"><h2>${saved && !ids.length ? 'Здесь будет ваша подборка' : 'Ничего не нашлось'}</h2><p>${saved && !ids.length ? 'Нажмите на значок закладки у понравившейся олимпиады.' : 'Попробуйте другое название или измените фильтры.'}</p><a class="btn btn-secondary" href="./competitions.html">Открыть каталог</a></div>`;
       document.querySelector('#count').textContent = `Найдено: ${result.length}`;
@@ -160,25 +157,25 @@
   }
   function fact(label,value) { return `<div><dt>${label}</dt><dd>${escape(value ?? 'Информация уточняется') || 'Информация уточняется'}</dd></div>`; }
   function renderDetail() {
-    const id = new URLSearchParams(location.search).get('id');
-    const record = records.find(item=>item.id===id);
-    if (!record) { notFound(); return; }
-    const topic = topics.get(record.category), isConcept = record.dataType === 'showcase';
-    document.title = `${record.title} · СПО / возможности`;
-    app.className = 'shell detail-page';
-    const related = records.filter(item=>item.id!==record.id && item.dataType===record.dataType && item.category===record.category).slice(0,3);
-    app.innerHTML = `<nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="./index.html">Главная</a><span>/</span><a href="${isConcept ? collectionUrl : './competitions.html'}">${isConcept ? 'Коллекция «Практика»' : 'Олимпиады'}</a></nav>
-      <section class="detail-hero"><div class="detail-heading"><p class="eyebrow">${escape(topic.label)}</p><h1>${escape(record.title)}</h1><p class="detail-lead">${escape(description(record))}</p><p class="source-line">${escape(sourceLabel(record))} · ${escape(record.edition || record.academicYear)}</p></div><div class="detail-visual"><img src="${topic.image}" alt="" width="960" height="640" fetchpriority="high"></div></section>
-      ${isConcept ? '<p class="collection-note">Авторский концепт мероприятия. Программа и сроки — часть коллекции «Практика», не официальные условия реального конкурса.</p>' : ''}
-      ${record.competitionStatus === 'completed' ? `<p class="collection-note"><strong>${escape(eventStatus(record))}.</strong> Эта карточка описывает прошедший сезон. Приём заявок на него завершён. На сайте организатора могут быть опубликованы сведения о новом сезоне.</p>` : ''}
-      <div class="detail-columns"><div><section class="detail-section"><h2>Об олимпиаде</h2><p>${escape(record.about || record.description || topic.description)}</p>${!isConcept ? `<p class="muted">${escape(record.verificationScope || 'Подробная программа уточняется у организатора.')}</p>` : `<p><strong>Результат работы:</strong> ${escape(record.outcome)}</p>`}</section><section class="detail-section"><h2>Кому может быть интересно</h2><p>${escape(record.interested || topic.interested)}</p><p class="muted">${isConcept ? escape(audienceLabels[record.audience]) : escape(record.audienceNote || 'Интерес к направлению не подтверждает допуск. Условия участия необходимо уточнить.')}</p></section><section class="detail-section"><h2>Что известно</h2><dl class="facts">${fact('Направление',record.category)}${record.sourceNumber ? fact('Номер в источнике',record.sourceNumber) : ''}${fact('Источник',sourceLabel(record))}${fact('Сезон',record.edition || record.academicYear)}${fact('Состояние сезона',eventStatus(record))}${fact('Статус',statusLabels[record.verificationStatus])}${fact('Аудитория',audienceLabels[record.audience])}${record.eventDate ? fact('Дата проведения',dateLabel(record.eventDate)) : ''}${record.registrationDeadline ? fact('Приём заявок до',dateLabel(record.registrationDeadline)) : ''}${record.format ? fact('Формат',record.format) : ''}${record.cost ? fact('Стоимость',record.cost) : ''}</dl>${safeExternal(record.sourceUrl) ? `<p><a href="${escape(safeExternal(record.sourceUrl))}" target="_blank" rel="noopener noreferrer">Источник сведений о сезоне ↗</a></p>` : ''}</section></div>
-      <aside class="detail-aside"><p class="eyebrow">Ваш следующий шаг</p><h2>${isConcept ? 'Познакомьтесь с программой' : 'Изучите условия участия'}</h2><p>Сохраните мероприятие и вернитесь к нему, когда будет удобно.</p><div class="action-stack">${organizerAction(record)}${saveButton(record,true)}</div><p class="aside-source">${escape(sourceLabel(record))}</p></aside></div>
-      ${related.length ? `<section class="section related-section">${sectionHeading('В том же направлении','Продолжите знакомство с интересующей темой.','','')}<div class="event-grid">${related.map(item=>card(item)).join('')}</div>` : ''}`;
+    const record=records.find(r=>r.id===new URLSearchParams(location.search).get('id'));
+    if(!record){notFound();return;}
+    document.title=`${record.title} · Олимпиады и конкурсы`;app.className='shell detail-page';
+    const related=official.filter(r=>r.id!==record.id && r.category===record.category).slice(0,3);
+    app.innerHTML=`<nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="./index.html">Главная</a><span>/</span><a href="./competitions.html">Олимпиады</a></nav>
+    <section class="detail-hero"><div class="detail-heading"><p class="eyebrow">${escape(topics.get(record.category).label)}</p><h1>${escape(record.title)}</h1><p class="detail-lead">${escape(description(record))}</p><p class="source-line">${escape(eventStatus(record))}</p></div><div class="detail-visual ${mediaClass(record)}" style="background:${mediaBackground(record)}">${visual(record,true)}</div></section>
+    ${!record.seasonConfirmed ? '<p class="season-note">Ориентир — 2027 год. Анонс нового сезона пока не опубликован.</p>' : ''}
+    <div class="detail-columns"><div><section class="detail-section"><h2>О мероприятии</h2><p>${escape(description(record))}</p>${record.stageNote?`<p>${escape(record.stageNote)}</p>`:''}</section>
+    <section class="detail-section"><h2>Кто может участвовать</h2><p>${escape(record.audienceNote || audienceLabels[record.audience])}</p></section>
+    <section class="detail-section"><h2>Даты и условия</h2><dl class="facts">${fact('Направление',record.category)}${fact('Организатор',record.organizer)}${fact(record.seasonConfirmed?'Сезон':'Ориентир',record.edition || '2027 год — анонс ожидается')}${fact('Проведение',eventStatus(record))}${record.registrationDeadline?fact('Регистрация до',dateLabel(record.registrationDeadline)):''}${record.format?fact('Формат',record.format):''}${record.cost?fact('Стоимость',record.cost):''}</dl>${record.seasonConfirmed?`<p><a href="${escape(safeExternal(record.seasonSourceUrl))}" target="_blank" rel="noopener noreferrer">Расписание и правила организатора ↗</a></p>`:''}</section></div>
+    <aside class="detail-aside"><h2>Сайт организатора</h2><p>Программа, требования к участникам и регистрация.</p><div class="action-stack">${organizerAction(record)}${saveButton(record,true)}</div></aside></div>
+    ${related.length?`<section class="section related-section">${sectionHeading('В том же направлении','','','')}<div class="event-grid">${related.map(r=>card(r)).join('')}</div></section>`:''}`;
   }
+
   function renderSources() {
     app.className='shell detail-page';
-    app.innerHTML=`<div class="page-intro"><p class="eyebrow">Проверенные первоисточники</p><h1>Источники и сезоны</h1><p>Проверка названий и ссылок: 15 октября 2026 года. Все ${official.length} карточек описывают завершённые сезоны. Страницы организаторов могут обновляться к новому набору.</p><p>Ссылки ведут на сайты организаторов, операторов и официальные публикации. Неизвестные условия не заполнены предположениями.</p></div><ol class="source-list">${official.map(record=>`<li><h2><a href="${urlFor(record)}">${escape(record.title)}</a></h2><p>Сезон ${escape(record.edition)} · Завершено</p><p>${escape(record.source)}</p><a href="${escape(safeExternal(record.sourceUrl))}" target="_blank" rel="noopener noreferrer">Публикация о сезоне ↗</a></li>`).join('')}</ol>`;
+    app.innerHTML=`<div class="page-intro"><h1>Организаторы</h1><p>Официальные страницы олимпиад и конкурсов.</p></div><ol class="source-list">${official.map(r=>`<li><h2><a href="${urlFor(r)}">${escape(r.title)}</a></h2><p>${escape(r.organizer)}</p><a href="${escape(safeExternal(r.officialUrl))}" target="_blank" rel="noopener noreferrer">Сайт организатора ↗</a>${r.image?.sourceUrl?` · <a href="${escape(safeExternal(r.image.sourceUrl))}" target="_blank" rel="noopener noreferrer">Фото / логотип</a>`:''}</li>`).join('')}</ol>`;
   }
+
   function notFound() { app.className='shell';app.innerHTML='<div class="empty-state"><h1>Мероприятие не найдено</h1><p>Возможно, ссылка неполная. Найдите мероприятие в каталоге.</p><a class="btn" href="./competitions.html">Открыть каталог</a></div>'; }
   function renderOrganizer() {
     const record = showcase.find(item=>item.id===new URLSearchParams(location.search).get('id'));
@@ -226,9 +223,9 @@
       [official,categories,showcase]=result;
       if(!result.every(Array.isArray))throw Error('Invalid catalogue format');
       official=official.map(record=>({...record,dataType:'official'}));
-      records=[...official,...showcase];
+      records=[...official];
       const proposals=read('spoDemoSubmissions',[]);
-      if(Array.isArray(proposals))for(const item of proposals)if(item.status==='approved' && typeof item.title==='string')records.push({...item,dataType:'local',source:'Предложение пользователя',verificationStatus:'needs_review',audience:'unknown'});
+      // Public catalogue contains only editorial records.
       app.removeAttribute('role');
       if(route==='competitions.html')renderCatalog();else if(route==='saved.html')renderCatalog(true);else if(route==='competition.html')renderDetail();else if(route==='organizer-demo.html')renderOrganizer();else if(route==='sources.html')renderSources();else renderHome();
       syncSaved();

@@ -22,3 +22,17 @@
 .source-list { padding-left: 1.5rem; }
 .source-list li { padding: 1.2rem 0; border-bottom: 1px solid #e1e7ed; overflow-wrap: anywhere; }
 .source-list h2 { font-size: 1.15rem; }
+
+/* Official event identity: preserve marks and show event photography at full width. */
+.card-visual.official-logo img { object-fit:contain; padding:32px; }
+.card-visual.official-photo img { object-fit:cover; }
+.detail-visual.official-logo img { padding:44px; object-fit:contain; }
+.detail-visual.official-photo img { object-fit:contain; }
+.identity-placeholder { min-height:200px; display:grid; place-items:center; padding:28px; text-align:center; color:#23446c; font-size:1.25rem; font-weight:600; }
+.event-hero-photo { margin:0; }
+.event-hero-photo img { width:100%; object-fit:contain; aspect-ratio:1.5; border-radius:14px; }
+.event-hero-photo figcaption { margin-top:10px; font-size:.73rem; color:var(--muted); }
+.season-note { margin:0 0 30px; padding:14px 18px; background:#edf2f8; border-radius:8px; color:#52657a; font-size:.9rem; }
+.direction-card { justify-content:space-between; }
+.public-footer { margin-top:64px; }
+@media(max-width:600px) { .card-visual.official-logo img { padding:24px; } .detail-visual.official-logo img { padding:30px; } .event-hero-photo img { max-height:280px; aspect-ratio:1.5; } .footer-bottom { line-height:1.7; } }
